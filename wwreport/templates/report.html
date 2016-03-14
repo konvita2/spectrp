@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    {% load staticfiles %}
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static '/css/bootstrap-theme.min.css' %}"/>
+
+</head>
+<body>
+    <div class="container">
+
+        <h3>Таблиця помірних ризиків</h3>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Опції звіту</h3>
+            </div>
+            <div class="panel-body">
+
+                <form>
+                    <div class="form-group col-md-4">
+                        <label for="timeToReportBy">Час на який формується звіт</label>
+                        <input type="datetime" class="form-control" id="timeToReportBy" name="timeToReportBy" /> <!-- todo init by current dt -->
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="">Порядок сортування</label>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="sortOrder" id="sort1" value="sort1" checked>
+                                Сортування за початком робіт наступної операції
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="sortOrder" id="sort2" value="sort2" checked>
+                                Сортування за початком робіт по вузлу
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="">Рівень ризику</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="riskLevel" id="risk1" value="risk1" checked>
+                                Високий
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="riskLevel" id="risk2" value="risk2" checked>
+                                Середній
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="riskLevel" id="risk3" value="risk3" checked>
+                                Низький
+                            </label>
+                        </div>
+                    </div>
+
+
+
+
+
+                </form>
+
+            </div>
+        </div>
+
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>№ пп</th>
+                    <th>Шифр замовлення</th>
+                    <th>Позначення та найменування</th>
+                    <th>Кількість позицій</th>
+                    <th>Початок робіт, кінець робіт</th>
+                    <th>Труд. (год) / Умови ризику</th>
+                    <th>Марка, Інвентарний № облад.</th>
+                    <th>№ операції та найменування</th>
+                    <th>Початок робіт наст. операції / Початок робіт по вузлу</th>
+                    <th>Причина</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+
+
+        </table>
+
+    </div>
+</body>
+</html>
